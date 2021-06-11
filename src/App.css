@@ -39,7 +39,7 @@
 .menu.p{
   color : red;
   float:left;
-  height: 350px;
+  height: 15vh;
 }
 
 /* #api-data-swagger {
@@ -53,16 +53,16 @@
 #api-data-redoc{
 
   float: left;
-  width: 90vw;
+  width: 85vw;
   overflow: auto;
-  height: 750px;
+  height: 85vh;
 
 }
 
 #api-data-swagger{
 
   float: left;
-  width: 90vw;
+  width: 85vw;
   overflow: auto;
   height: 750px;
 

@@ -3,8 +3,9 @@ import styled from "styled-components";
 import { AiOutlineFile, AiOutlineFolder} from "react-icons/ai";
 import { DiJavascript1, DiCss3Full, DiHtml5, DiReact } from "react-icons/di";
 
-const Sidebar1 = props => {
-  
+
+const Sidebar1 = (props) => {
+
   console.log(props);
 
   const FILE_ICONS = {
@@ -50,6 +51,8 @@ const Sidebar1 = props => {
 
     const clickMe = () => {
       // alert(paths);
+
+      
       props.updateDefinitionLink(paths);
       // <App1 paths = {paths}/>
     };
@@ -141,5 +144,6 @@ const structure = [require('./structure_file.json')];
   );
 
 }
+
 export default Sidebar1;
   

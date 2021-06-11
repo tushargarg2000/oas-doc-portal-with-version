@@ -55,12 +55,14 @@ class App extends Component {
           updateDefinitionLink = {this.updateDefinitionLink}
         />
 
+        
         <div className = "menu" > 
             <div className = "heading">
               <p>
               This is the menu bar we are having to toggle between Redocly and Swaggger
               </p>
-              <Navbar />
+
+              <Navbar />  
 
               {/* <Route path="/" component={} exact /> */}
                 
@@ -74,17 +76,11 @@ class App extends Component {
                    exact component={() => <App1 value = {this.state.definitionLink} />}
                   />    
   
-                    
+
               
                 </Switch>
 
-
-
-
             </div>
-
-            
-              
             
 
         {/* <App1 definition = {this.state.definitionLink} /> */}
