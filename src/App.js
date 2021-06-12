@@ -9,6 +9,8 @@ import Navbar from './Navbar.js'
 import {Route,Switch,Router} from 'react-router-dom';
 import App2 from './App2';
 
+import Sidebar from './Sidebar.js';
+
 class App extends Component {
   
   constructor(props) {
@@ -51,10 +53,10 @@ class App extends Component {
 
       <div className="App">
 
-        <Sidebar1
+        <Sidebar
           updateDefinitionLink = {this.updateDefinitionLink}
         />
-
+        {/* <Sidebar1 updateDefinitionLink = {this.updateDefinitionLink}/> */}
         
         <div className = "menu" > 
             <div className = "heading">

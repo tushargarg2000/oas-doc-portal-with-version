@@ -103,6 +103,7 @@ const Sidebar1 = (props) => {
     // loop through the data
     return data.map(item => {
       // if its a file render <File />
+      
       if (item.IsDir === false) {
         return <File name={item.name} paths = {item.paths}/>;
       }
