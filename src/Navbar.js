@@ -1,24 +1,134 @@
-import React from "react";
+import React,{Component} from "react";
 import {Link} from "react-router-dom";
+//import Switch from '@material-ui/core/Switch';
+//import {Switch} from "antd";
+import Switch from "react-switch";
+import { RedocStandalone } from 'redoc';
+import SwaggerUI from "swagger-ui-react"
+import "swagger-ui-react/swagger-ui.css"
 
-function Navbar() {
-  return (
-    <div>
+
+function Type(props) {
+
+  if(props.value){
+    return (
+      <div id = "api-data-redoc" >
+      <RedocStandalone specUrl= {props.path} 
+      options={{
+          nativeScrollbars: false,
+          theme: { colors: { primary: { main: '#dd5522' } } },
+          // scroll-behavior: smooth
+      }}
+      
+      />
+
+      </div>
+
+    );
+  }
+  else{
+    return(
+      <div id = "api-data-swagger" >
+          
+          <SwaggerUI url= {props.path} />
+      </div>
+
+    );
+  }
+}
+
+class Navbar extends Component {
+  constructor() {
+    super();
+    this.state = { checked: false };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(checked) {
+    this.setState({ checked });
+
+  }
+
+  render() {
+    return (
+
+      
+      <label>
+      Hi this is Tushar with Navbar doing good and great 
       <Link to="/">Get the Redoc version here </Link>
       <br />
       <Link to="/Swagger"> Get the Swagger version Here </Link>
 
-      <select>
-        <option selected disabled = "true">---Select the version of this file </option>
-        <option>--</option>
+        <div className="example">
+        <h2>Custom styling</h2>
+        <label htmlFor="material-switch">
+          <span>Switch with style inspired by Material Design</span>
+          <Switch
+            checked={this.state.checked}
+            onChange={this.handleChange}
+            onColor="#86d3ff"
+            onHandleColor="#2693e6"
+            offColor="#86d3ff"
+            offHandleColor="#2693e6"
+            handleDiameter={36}
+            uncheckedIcon={false}
+            checkedIcon={false}
+            boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
+            activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
+            height={28}
+            width={60}
+            className="react-switch"
+            id="material-switch"
+          />
+        </label>
+        <div value = {this.state.checked} />
 
-      </select>
+        <Type value = {this.state.checked} path = {this.props.path} />
+
+      </div>
+
+
+
+      </label>
+    );
+  }
+}
+
+
+
+
+// function Navbar() {
+ 
+//   // const [state, setState] = React.useState({
+//   //   checkedA: true,
+//   //   checkedB: true,
+//   // });
+
+//   // const handleChange = (event) => {
+//   //   setState({ ...state, [event.target.name]: event.target.checked });
+//   // };
+
+//   return (
+//     <div>
+
+//       <Link to="/">Get the Redoc version here </Link>
+//       <br />
+//       <Link to="/Swagger"> Get the Swagger version Here </Link>
+
+//       {/* <Switch
+//         defaultChecked
+//         color="default"
+//         inputProps={{ 'aria-label': 'checkbox with default color' }}
+//       /> */}
+      
+//       <Switch checkedChildren= "Read Docs" unCheckedChildren= "Try-It-Out" defaultChecked size = "large" />
+
+//       <Switch />
+//       re
     
-    </div>
+//     </div>
 
-    
-
-  );
-};
+//   );
+// };
 
 export default Navbar;

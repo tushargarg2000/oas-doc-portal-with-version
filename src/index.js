@@ -7,7 +7,7 @@ import Sidebar2 from './Sidebar2';
 import Parent1 from './Parent1';
 // import reportWebVitals from './reportWebVitals';
 import { BrowserRouter} from 'react-router-dom';
-
+import 'antd/dist/antd.css';
 
 ReactDOM.render(
   <React.StrictMode>

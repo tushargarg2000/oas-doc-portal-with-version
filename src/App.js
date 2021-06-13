@@ -1,50 +1,79 @@
 import React, { Component } from 'react';
 import './App.css'
+import Switch from "react-switch";
 
 import Sidebar1 from './Sidebar1';
 import App1 from './App1';
 import '../node_modules/swagger-ui/dist/swagger-ui.css'
-
+import { RedocStandalone } from 'redoc';
+import SwaggerUI from "swagger-ui-react"
+import "swagger-ui-react/swagger-ui.css"
 import Navbar from './Navbar.js'
-import {Route,Switch,Router} from 'react-router-dom';
+import {Route,Router} from 'react-router-dom';
 import App2 from './App2';
 
 import Sidebar from './Sidebar.js';
+
+function Type(props) {
+
+    if(props.value){
+      return (
+        <div id = "api-data-redoc" >
+        <RedocStandalone specUrl= {props.path} 
+        options={{
+            nativeScrollbars: false,
+            theme: { colors: { primary: { main: '#dd5522' } } },
+            // scroll-behavior: smooth
+        }}
+        
+        />
+
+        </div>
+
+      );
+    }
+    else{
+      return(
+
+        <div id = "api-data-swagger" >
+            
+            <SwaggerUI url= {props.path} />
+
+        </div>
+
+      );
+
+    }
+
+
+}
+
 
 class App extends Component {
   
   constructor(props) {
     super(props);
     this.state = {
-        //organizationConfig: null,
-        //xdefinitionList: null,
+
+        checked: false,
         definitionLink: "https://petstore3.swagger.io/api/v3/openapi.json"
       }
+      this.handleChange = this.handleChange.bind(this);
       this.updateDefinitionLink = this.updateDefinitionLink.bind(this)
     }
 
-  // componentWillMount() {
-  //   this.setState({
-  //     organizationConfig: Config.orgData,
-  //   })
-  // }
-
-  componentDidUpdate() {
-
-    // SwaggerUI({
-    //   domNode: document.getElementById("api-data"),
-    //   url: this.state.definitionLink
-    // })
-  }
-
   updateDefinitionLink(newLink) {
-    console.log("Hurrah we have got insde the update Definition Link");
-    console.log(newLink);
+    //console.log("Hurrah we have got insde the update Definition Link");
+    //console.log(newLink);
     this.setState({
       definitionLink: newLink
       // console.log(definitionLink);
     })
     
+  }
+  handleChange(checked) {
+    this.setState({ checked });
+
   }
 
   
@@ -56,6 +85,7 @@ class App extends Component {
         <Sidebar
           updateDefinitionLink = {this.updateDefinitionLink}
         />
+
         {/* <Sidebar1 updateDefinitionLink = {this.updateDefinitionLink}/> */}
         
         <div className = "menu" > 
@@ -64,13 +94,49 @@ class App extends Component {
               This is the menu bar we are having to toggle between Redocly and Swaggger
               </p>
 
-              <Navbar />  
+              <Navbar path = {this.state.definitionLink} />  
 
-              {/* <Route path="/" component={} exact /> */}
+              {/*
+               <label>
+                   <Link to="/">Get the Redoc version here </Link>
+                  <br />
+                  <Link to="/Swagger"> Get the Swagger version Here </Link> 
+
+                    <div className="example">
+                    <h2>Custom styling</h2>
+                    
+                      <Switch
+                        checked={this.state.checked}
+                        onChange={this.handleChange}
+                        onColor="#86d3ff"
+                        onHandleColor="#2693e6"
+                        offColor="#86d3ff"
+                        offHandleColor="#2693e6"
+                        handleDiameter={36}
+                        uncheckedIcon={false}
+                        checkedIcon={false}
+                        boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
+                        activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
+                        height={28}
+                        width={60}
+                        className="react-switch"
+                        id="material-switch"
+                      />
+                    
+                  </div>
+                  
+                  <Type value = {this.state.checked} path = {this.state.definitionLink} />
+              </label>
+              
+              */}
+
+
+
+
                 
-                <Switch>
+                {/* <Switch>
                 
-                <Route path="/Swagger"
+                {/* <Route path="/Swagger"
                   exact component={() => <App2 value = {this.state.definitionLink} />}
                   />   
                   
@@ -80,7 +146,7 @@ class App extends Component {
   
 
               
-                </Switch>
+                </Switch> */} 
 
             </div>
             

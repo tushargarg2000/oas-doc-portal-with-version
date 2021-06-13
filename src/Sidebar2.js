@@ -4,6 +4,8 @@ import GlobalStyles from "./styles/GlobalStyles";
 import Folder from "./components/Folder";
 
 class Sidebar2 extends Component {
+  
+  
   render() {
     return (
       <React.Fragment>
