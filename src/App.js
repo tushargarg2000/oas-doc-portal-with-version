@@ -90,9 +90,9 @@ class App extends Component {
         
         <div className = "menu" > 
             <div className = "heading">
-              <p>
+              {/* <p>
               This is the menu bar we are having to toggle between Redocly and Swaggger
-              </p>
+              </p> */}
 
               <Navbar path = {this.state.definitionLink} />  
 

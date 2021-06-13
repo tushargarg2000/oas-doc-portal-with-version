@@ -1,5 +1,6 @@
 import React,{Component} from "react";
 import {Link} from "react-router-dom";
+import './Navbar.css';
 //import Switch from '@material-ui/core/Switch';
 //import {Switch} from "antd";
 import Switch from "react-switch";
@@ -52,17 +53,22 @@ class Navbar extends Component {
   render() {
     return (
 
+      <div>
+      <div className = "big-div">
+      <div className = "api-heading">
+        
+          <h1>API DOCS PORTAL</h1>
+      </div>
       
+      <div className = "navbar-top-side">
+        
+      <div className = "heading-1">
+      <h2>Read Docs</h2>
+      </div>
       <label>
-      Hi this is Tushar with Navbar doing good and great 
-      <Link to="/">Get the Redoc version here </Link>
-      <br />
-      <Link to="/Swagger"> Get the Swagger version Here </Link>
-
-        <div className="example">
-        <h2>Custom styling</h2>
-        <label htmlFor="material-switch">
-          <span>Switch with style inspired by Material Design</span>
+        
+        <label htmlFor="material-switch" className = "button-div">
+          
           <Switch
             checked={this.state.checked}
             onChange={this.handleChange}
@@ -77,19 +83,27 @@ class Navbar extends Component {
             activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
             height={28}
             width={60}
-            className="react-switch"
+            className="heading-2"
             id="material-switch"
+            
           />
         </label>
-        <div value = {this.state.checked} />
 
-        <Type value = {this.state.checked} path = {this.props.path} />
+      </label>
+      <div className = "heading-3">
+      <h2>
+        Try It Out
+      </h2>
+      </div>
 
       </div>
 
 
+      </div>
 
-      </label>
+       <Type value = {this.state.checked} path = {this.props.path} />
+       
+       </div>
     );
   }
 }
