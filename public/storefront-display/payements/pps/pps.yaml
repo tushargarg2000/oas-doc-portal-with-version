@@ -1,6 +1,6 @@
 openapi: 3.0.0
 servers:
-  - description: SwaggerHub API Auto Mocking
+  - description: SwaggerHub API Auto Mocking and trying lerna for the same 
     url: 'https://virtserver.swaggerhub.com/myntra179/OAuth2-version/1.0.0'
 info:
   version: 1.0.0
