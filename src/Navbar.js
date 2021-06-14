@@ -13,6 +13,18 @@ function Type(props) {
 
   if(props.value){
     return (
+
+
+      <div id = "api-data-swagger" >
+          
+      <SwaggerUI url= {props.path} />
+      </div>
+      
+
+    );
+  }
+  else{
+    return(
       <div id = "api-data-redoc" >
       <RedocStandalone specUrl= {props.path} 
       options={{
@@ -23,15 +35,6 @@ function Type(props) {
       
       />
 
-      </div>
-
-    );
-  }
-  else{
-    return(
-      <div id = "api-data-swagger" >
-          
-          <SwaggerUI url= {props.path} />
       </div>
 
     );
@@ -74,8 +77,8 @@ class Navbar extends Component {
             onChange={this.handleChange}
             onColor="#86d3ff"
             onHandleColor="#2693e6"
-            offColor="#86d3ff"
-            offHandleColor="#2693e6"
+            offColor= "#F08080"
+            offHandleColor="#DC143C"
             handleDiameter={36}
             uncheckedIcon={false}
             checkedIcon={false}

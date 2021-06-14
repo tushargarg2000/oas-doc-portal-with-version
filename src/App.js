@@ -10,7 +10,7 @@ import SwaggerUI from "swagger-ui-react"
 import "swagger-ui-react/swagger-ui.css"
 import Navbar from './Navbar.js'
 import {Route,Router} from 'react-router-dom';
-import App2 from './App2';
+
 
 import Sidebar from './Sidebar.js';
 

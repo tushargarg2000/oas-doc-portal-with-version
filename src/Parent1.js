@@ -2,7 +2,7 @@ import React, { Component, useState } from "react";
 import styled from "styled-components";
 import { AiOutlineFile, AiOutlineFolder} from "react-icons/ai";
 import { DiJavascript1, DiCss3Full, DiHtml5, DiReact } from "react-icons/di";
-import App3 from "./App3";
+
 import './App.css'
 
 
@@ -140,7 +140,7 @@ const Parent1 = () =>{
       </div>
     
         
-      <App3 value = {definitionLink} />
+      {/* <App3 value = {definitionLink} /> */}
 
     </div>
 
