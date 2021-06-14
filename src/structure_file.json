@@ -24,8 +24,20 @@
                                    "name": "asgard.yaml",
                                    "paths": "storefront-display/payements/asgard/asgard.yaml",
                                    "childrens": []
+                              },
+                              {
+                                   "IsDir": true,
+                                   "name": "version",
+                                   "paths": "storefront-display/payements/asgard/version",
+                                   "childrens": []
                               }
                          ]
+                    },
+                    {
+                         "IsDir": true,
+                         "name": "new_service",
+                         "paths": "storefront-display/payements/new_service",
+                         "childrens": []
                     },
                     {
                          "IsDir": true,
@@ -37,6 +49,12 @@
                                    "name": "pps.yaml",
                                    "paths": "storefront-display/payements/pps/pps.yaml",
                                    "childrens": []
+                              },
+                              {
+                                   "IsDir": true,
+                                   "name": "version",
+                                   "paths": "storefront-display/payements/pps/version",
+                                   "childrens": []
                               }
                          ]
                     },
@@ -47,18 +65,18 @@
                          "childrens": [
                               {
                                    "IsDir": true,
-                                   "name": "version",
-                                   "paths": "storefront-display/payements/wallet/version",
+                                   "name": "archive",
+                                   "paths": "storefront-display/payements/wallet/archive",
                                    "childrens": [
                                         {
                                              "IsDir": true,
                                              "name": "1.1.0",
-                                             "paths": "storefront-display/payements/wallet/version/1.1.0",
+                                             "paths": "storefront-display/payements/wallet/archive/1.1.0",
                                              "childrens": [
                                                   {
                                                        "IsDir": false,
-                                                       "name": "asgard.yaml",
-                                                       "paths": "storefront-display/payements/wallet/version/1.1.0/asgard.yaml",
+                                                       "name": "2.1.0.yaml",
+                                                       "paths": "storefront-display/payements/wallet/archive/1.1.0/2.1.0.yaml",
                                                        "childrens": []
                                                   }
                                              ]
@@ -66,17 +84,23 @@
                                         {
                                              "IsDir": true,
                                              "name": "2.0.2",
-                                             "paths": "storefront-display/payements/wallet/version/2.0.2",
+                                             "paths": "storefront-display/payements/wallet/archive/2.0.2",
                                              "childrens": [
                                                   {
                                                        "IsDir": false,
-                                                       "name": "pps.yaml",
-                                                       "paths": "storefront-display/payements/wallet/version/2.0.2/pps.yaml",
+                                                       "name": "2.0.2.yaml",
+                                                       "paths": "storefront-display/payements/wallet/archive/2.0.2/2.0.2.yaml",
                                                        "childrens": []
                                                   }
                                              ]
                                         }
                                    ]
+                              },
+                              {
+                                   "IsDir": false,
+                                   "name": "package.json",
+                                   "paths": "storefront-display/payements/wallet/package.json",
+                                   "childrens": []
                               },
                               {
                                    "IsDir": false,
