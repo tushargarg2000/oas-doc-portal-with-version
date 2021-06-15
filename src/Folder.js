@@ -2,33 +2,7 @@ import React, {Component, Fragment} from "react";
 import PropTypes from "prop-types";
 import './Folder.css';
 import FolderContent from "./FolderContent";
-<<<<<<< HEAD
-
-import PropTypes from "prop-types";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-
-import { StyledButton } from "./styles/GlobalStyles";
-
-const StyledFolder = styled.div`
-padding-left: 20px;
-
-.folder--label {
-  display: flex;
-  align-items: center;
-  span {
-	margin-left: 5px;
-  }
-}
-`;
-
-// const Collapsible = styled.div`
-//     height: ${p => (p.isOpen ? "auto" : "0")};
-//     overflow: hidden;
-// `;
-
-=======
 import {Route} from "react-router-dom";
->>>>>>> 12b103c4f3e74670bfc25f04c0a91536c5fac14c
 
 const propTypes = {
   path: PropTypes.string.isRequired,
@@ -61,65 +35,6 @@ const propTypes = {
 
 
 class Folder extends Component {
-<<<<<<< HEAD
-
-	onOpenFolder = () => {
-
-		const { path, history, match, location } = this.props;
-
-		//console.log('Hii welcome ',this.props);
-		// If location pathname (URL) matches match.url (arent routes path) are the same: OPEN DIRECTORY
-		if (location.pathname === match.url) return history.push(path);
-		// when a sibling folder is open and a folder is clicked, go to this new path
-		if (!location.pathname.includes(path)) return history.push(path);
-		// Closing folder (going back up to parent url/path)
-		
-		return history.push(match.url);
-	};
-
-	render() {
-
-		const {
-			path,
-			name,
-			location: { pathname },
-			depth,
-		} = this.props;
-
-		
-		const isOpen = pathname.includes(path);
-		console.log('check is open',isOpen);
-		//const isOpen = pathname.includes(path);
-		return (
-		<Fragment>
-			<div onClick={this.onOpenFolder} depth={depth}>
-			{isOpen ? (
-				<i className= "fas fa-folder-open medium-yellow fa-lg" />
-			) : (
-				<i className= "fas fa-folder medium-yellow fa-lg" />
-			)}{" "}
-			{name}
-			</div>
-
-			<Route
-			path={`${path}`}
-
-			render={({ history, match, location }) => (
-				<FolderContent
-				depth={depth}
-				history={history}
-				match={match}
-				location={location}
-				name={name}
-				path={path}
-				/>
-				
-			)}
-			/>
-		</Fragment>
-		);
-	}
-=======
 
   onOpenFolder = () => {
 
@@ -151,7 +66,7 @@ class Folder extends Component {
           ) : (
             <i className="fas fa-folder medium-yellow fa-lg"/>
           )}{" "}
-          {name}{'---------'}
+          {name}
         </div>
 
         <Route
@@ -171,7 +86,6 @@ class Folder extends Component {
       </Fragment>
     );
   }
->>>>>>> 12b103c4f3e74670bfc25f04c0a91536c5fac14c
 }
 
 Folder.propTypes = propTypes;

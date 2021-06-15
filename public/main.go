@@ -2,7 +2,7 @@ package main
 
 import (
 	"encoding/json"
-
+	"fmt"
 	"io/ioutil"
 	"log"
 	"os"
@@ -22,6 +22,10 @@ type File struct {
 }
 
 func iterateJSON(path string) {
+
+	fmt.Println(path)
+	//c := '/'
+	//path = string(c) + path
 
 	//fmt.Println(path)
 	rootOSFile, _ := os.Stat(path)
@@ -58,6 +62,7 @@ func toFile(file os.FileInfo, path string) *File {
 	if file.IsDir() {
 		directoryType = "folder"
 	}
+
 	JSONFile := File{ //ModifiedTime: file.ModTime(),
 		IsDir: file.IsDir(),
 		//Size:     file.Size(),
