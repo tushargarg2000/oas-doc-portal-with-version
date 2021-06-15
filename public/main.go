@@ -39,8 +39,8 @@ func iterateJSON(path string) {
 	rootFile := toFile(rootOSFile, path) //start with root file
 	rootFile1 := toFile(rootOSFile1, "public")
 
-	fmt.Println("root file is ", rootFile)
-	fmt.Println("root file 1 is ", rootFile1)
+	//fmt.Println("root file is ", rootFile)
+	//fmt.Println("root file 1 is ", rootFile1)
 	stack := []*File{rootFile}
 
 	for len(stack) > 0 { //until stack is empty,
@@ -68,6 +68,7 @@ func iterateJSON(path string) {
 			stack = append(stack, child) //append the child to the stack, so the same process can be run again
 		}
 	}
+
 	rootFile1.Children = append(rootFile1.Children, rootFile)
 	output, _ := json.MarshalIndent(rootFile1, "", "     ")
 	//fmt.Println(string(output))

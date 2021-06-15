@@ -10,13 +10,6 @@
                "children": [
                     {
                          "IsDir": true,
-                         "name": "Test_service",
-                         "path": "/public/storefront-display/Test_service",
-                         "children": [],
-                         "type": "folder"
-                    },
-                    {
-                         "IsDir": true,
                          "name": "cart",
                          "path": "/public/storefront-display/cart",
                          "children": [],
@@ -24,112 +17,9 @@
                     },
                     {
                          "IsDir": true,
-                         "name": "new_service",
-                         "path": "/public/storefront-display/new_service",
-                         "children": [
-                              {
-                                   "IsDir": false,
-                                   "name": "CHANGELOG.md",
-                                   "path": "/public/storefront-display/new_service/CHANGELOG.md",
-                                   "children": [],
-                                   "type": "file"
-                              },
-                              {
-                                   "IsDir": false,
-                                   "name": "README.md",
-                                   "path": "/public/storefront-display/new_service/README.md",
-                                   "children": [],
-                                   "type": "file"
-                              },
-                              {
-                                   "IsDir": true,
-                                   "name": "__tests__",
-                                   "path": "/public/storefront-display/new_service/__tests__",
-                                   "children": [
-                                        {
-                                             "IsDir": false,
-                                             "name": "new_service.test.js",
-                                             "path": "/public/storefront-display/new_service/__tests__/new_service.test.js",
-                                             "children": [],
-                                             "type": "file"
-                                        }
-                                   ],
-                                   "type": "folder"
-                              },
-                              {
-                                   "IsDir": true,
-                                   "name": "lib",
-                                   "path": "/public/storefront-display/new_service/lib",
-                                   "children": [
-                                        {
-                                             "IsDir": false,
-                                             "name": "new_service.js",
-                                             "path": "/public/storefront-display/new_service/lib/new_service.js",
-                                             "children": [],
-                                             "type": "file"
-                                        }
-                                   ],
-                                   "type": "folder"
-                              },
-                              {
-                                   "IsDir": false,
-                                   "name": "package.json",
-                                   "path": "/public/storefront-display/new_service/package.json",
-                                   "children": [],
-                                   "type": "file"
-                              },
-                              {
-                                   "IsDir": false,
-                                   "name": "wallet.yaml",
-                                   "path": "/public/storefront-display/new_service/wallet.yaml",
-                                   "children": [],
-                                   "type": "file"
-                              }
-                         ],
-                         "type": "folder"
-                    },
-                    {
-                         "IsDir": true,
                          "name": "payements",
                          "path": "/public/storefront-display/payements",
                          "children": [
-                              {
-                                   "IsDir": false,
-                                   "name": "README.md",
-                                   "path": "/public/storefront-display/payements/README.md",
-                                   "children": [],
-                                   "type": "file"
-                              },
-                              {
-                                   "IsDir": true,
-                                   "name": "Tushar",
-                                   "path": "/public/storefront-display/payements/Tushar",
-                                   "children": [
-                                        {
-                                             "IsDir": false,
-                                             "name": "tushar.yaml",
-                                             "path": "/public/storefront-display/payements/Tushar/tushar.yaml",
-                                             "children": [],
-                                             "type": "file"
-                                        }
-                                   ],
-                                   "type": "folder"
-                              },
-                              {
-                                   "IsDir": true,
-                                   "name": "__tests__",
-                                   "path": "/public/storefront-display/payements/__tests__",
-                                   "children": [
-                                        {
-                                             "IsDir": false,
-                                             "name": "payements.test.js",
-                                             "path": "/public/storefront-display/payements/__tests__/payements.test.js",
-                                             "children": [],
-                                             "type": "file"
-                                        }
-                                   ],
-                                   "type": "folder"
-                              },
                               {
                                    "IsDir": true,
                                    "name": "asgard",
@@ -154,35 +44,6 @@
                               },
                               {
                                    "IsDir": true,
-                                   "name": "lib",
-                                   "path": "/public/storefront-display/payements/lib",
-                                   "children": [
-                                        {
-                                             "IsDir": false,
-                                             "name": "payements.js",
-                                             "path": "/public/storefront-display/payements/lib/payements.js",
-                                             "children": [],
-                                             "type": "file"
-                                        }
-                                   ],
-                                   "type": "folder"
-                              },
-                              {
-                                   "IsDir": true,
-                                   "name": "new_service",
-                                   "path": "/public/storefront-display/payements/new_service",
-                                   "children": [],
-                                   "type": "folder"
-                              },
-                              {
-                                   "IsDir": false,
-                                   "name": "package.json",
-                                   "path": "/public/storefront-display/payements/package.json",
-                                   "children": [],
-                                   "type": "file"
-                              },
-                              {
-                                   "IsDir": true,
                                    "name": "pps",
                                    "path": "/public/storefront-display/payements/pps",
                                    "children": [
@@ -192,13 +53,6 @@
                                              "path": "/public/storefront-display/payements/pps/archive",
                                              "children": [],
                                              "type": "folder"
-                                        },
-                                        {
-                                             "IsDir": false,
-                                             "name": "package.json",
-                                             "path": "/public/storefront-display/payements/pps/package.json",
-                                             "children": [],
-                                             "type": "file"
                                         },
                                         {
                                              "IsDir": false,

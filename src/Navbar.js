@@ -6,7 +6,21 @@ import SwaggerUI from "swagger-ui-react"
 import "swagger-ui-react/swagger-ui.css"
 
 function Type(props) {
-  if (props.value) {
+
+  const copyPath =  props.path;
+  const extension = copyPath.split(".").pop(); //checking if extension is valid with this or not
+  console.log("extension is ",extension);
+  if(extension!="yaml"){
+  return (
+    <div className = "extension">
+      Welcome to API docs definition 
+      Please select a file to view the documentation from the Sidebar
+
+    </div>
+
+  );
+  }
+  else if (props.value) {
     return (
       <div id="api-data-swagger">
         <SwaggerUI url={props.path}/>
