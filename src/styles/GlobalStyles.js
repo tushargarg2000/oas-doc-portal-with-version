@@ -12,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
 
   .App {
     min-height: 100vh;
-    background-color: #232731;
+    background-color: #ffffff;
     padding: 20px 0 50px 30px;
     font-family: 'Open Sans', sans-serif;
   }

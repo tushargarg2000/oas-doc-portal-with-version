@@ -8,6 +8,9 @@ import { DiJavascript1, DiCss3Full, DiHtml5, DiReact } from "react-icons/di";
 import { getFolderContent } from "./utils";
 
 import FolderContent from "./FolderContent";
+
+import FolderContent1 from "./FolderContent1";
+
 import PropTypes from "prop-types";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -104,6 +107,7 @@ class Folder extends Component {
 			location: { pathname },
 			depth,
 		} = this.props;
+
 		//const { name, path, childrens, update } = this.props;
 		//const { isopen } = this.state;
 
@@ -114,15 +118,16 @@ class Folder extends Component {
 		<Fragment>
 			<div onClick={this.onOpenFolder} depth={depth}>
 			{isOpen ? (
-				<i className="fas fa-folder-open medium-yellow fa-lg" />
+				<i className= "fas fa-folder-open medium-yellow fa-lg" />
 			) : (
-				<i className="fas fa-folder medium-yellow fa-lg" />
+				<i className= "fas fa-folder medium-yellow fa-lg" />
 			)}{" "}
 			{name}
 			</div>
 
 			<Route
 			path={`${path}`}
+
 			render={({ history, match, location }) => (
 				<FolderContent
 				depth={depth}
@@ -132,6 +137,8 @@ class Folder extends Component {
 				name={name}
 				path={path}
 				/>
+				// <FolderContent1 />
+				//foldercontent
 			)}
 			/>
 		</Fragment>

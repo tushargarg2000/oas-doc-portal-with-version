@@ -79,7 +79,13 @@
      const { name, depth, history, location, match } = this.props;
      /* Show error if broken */
 
-    console.log('content in FolderContent is ',content);
+    //  console.log('content in FolderContent is ',content);
+
+    // return (
+    //     <div>
+    //       This is coming from Folder content
+    //     </div>
+    // );
 
      if (error) {
        return (

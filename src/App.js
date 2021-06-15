@@ -1,20 +1,15 @@
 import React, { Component } from 'react';
 import './App.css'
 import Switch from "react-switch";
-
-import Sidebar1 from './Sidebar1';
-import App1 from './App1';
 import '../node_modules/swagger-ui/dist/swagger-ui.css'
-import { RedocStandalone } from 'redoc';
-import SwaggerUI from "swagger-ui-react"
-import "swagger-ui-react/swagger-ui.css"
 import Navbar from './Navbar.js'
-import {Route,Router} from 'react-router-dom';
-import Sidebar2 from './Sidebar2';
+//import {Route,Router} from 'react-router-dom';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Sidebar from './Sidebar.js';
-//import Sidebar from './Sidebar3';
 
+import Folder from './Folder.js';
+import GlobalStyles from './styles/GlobalStyles';
 
 class App extends Component {
   
@@ -22,10 +17,10 @@ class App extends Component {
     super(props);
     this.state = {
 
-        checked: false,
+        //checked: false,
         definitionLink: "https://petstore3.swagger.io/api/v3/openapi.json"
       }
-      this.handleChange = this.handleChange.bind(this);
+      //this.handleChange = this.handleChange.bind(this);
       this.updateDefinitionLink = this.updateDefinitionLink.bind(this)
     }
 
@@ -47,11 +42,29 @@ class App extends Component {
   render() {
     return (
 
+      
       <div className="App">
 
-        <Sidebar
+    <GlobalStyles />
+        {/* <Sidebar
           updateDefinitionLink = {this.updateDefinitionLink}
-        />
+        /> */}
+
+        <Router>
+            <Route
+              path="/"
+              render={({ history, location, match }) => (
+                <Folder
+                  depth={0}
+                  history={history}
+                  match={match}
+                  location={location}
+                  name="storefront-display"
+                  path="/storefront-display"
+                />
+              )}
+            />
+        </Router>
 
 
         
@@ -73,29 +86,8 @@ class App extends Component {
                   <Link to="/Swagger"> Get the Swagger version Here </Link> 
 
                     <div className="example">
-                    <h2>Custom styling</h2>
-                    
-                      <Switch
-                        checked={this.state.checked}
-                        onChange={this.handleChange}
-                        onColor="#86d3ff"
-                        onHandleColor="#2693e6"
-                        offColor="#86d3ff"
-                        offHandleColor="#2693e6"
-                        handleDiameter={36}
-                        uncheckedIcon={false}
-                        checkedIcon={false}
-                        boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
-                        activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
-                        height={28}
-                        width={60}
-                        className="react-switch"
-                        id="material-switch"
-                      />
-                    
-                  </div>
-                  
-                  <Type value = {this.state.checked} path = {this.state.definitionLink} />
+                        <h2>Custom styling</h2>
+                    </div>
               </label>
               
               */}

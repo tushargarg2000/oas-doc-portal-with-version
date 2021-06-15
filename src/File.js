@@ -4,14 +4,16 @@ import styled from "styled-components";
 import { AiOutlineFile, AiOutlineFolder} from "react-icons/ai";
 import { DiJavascript1, DiCss3Full, DiHtml5, DiReact } from "react-icons/di";
 
+import {getClassWithColor} from "file-icons-js";
 
 import FolderContent from "./FolderContent";
 import PropTypes from "prop-types";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-
+import { StyledButton } from "./styles/GlobalStyles";
 
 import { getFolderContent } from "./utils";
+import { update } from "lodash";
 
 const FILE_ICONS = {
     js: <DiJavascript1 />,
@@ -49,26 +51,44 @@ const propTypes = {
 
 
 class File extends Component {
-	constructor(props) {
-		super(props);
-	}
+	// constructor(props) {
+	// 	super(props);
+	// }
 
-	componentDidMount() {}
+	onFileClick = () => {
+		const { path, history } = this.props;
+		update(path);
+		return history.push(path);
 
-	render() {
-		const { name, path, update } = this.props;
-
+	  };
+	
+	  render() {
+		const { name, depth } = this.props;
+		//const iconClass = fileIcons.getClassWithColor(name);
+		const iconClass = getClassWithColor(name);
 		return (
-
-			<StyledFile>
-			 <div onClick={() => update(path)}>
-			 <AiOutlineFile />		 
-			 {name}
-		 	</div>
-			 </StyledFile>
-		
+		  <StyledButton depth={depth} onClick={this.onFileClick}>
+			<i className={iconClass} /> {name}
+		  </StyledButton>
 		);
-	}
+	  }
+
+	// render() {
+	// 	const { name, path, update } = this.props;
+
+	// 	return (
+
+	// 		<StyledFile>
+	// 		 <div onClick={() => update(path)}>
+	// 		 <AiOutlineFile />		 
+	// 		 {name}
+	// 	 	</div>
+	// 		 </StyledFile>
+		
+	// 	);
+	// }
 }
+
+File.propTypes = propTypes;
 
 export default File;
