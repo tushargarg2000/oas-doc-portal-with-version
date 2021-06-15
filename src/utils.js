@@ -1,12 +1,9 @@
-
-
 import database from "./structure_file.json";
 
 export const getFolderContent = path => {
-    
     const pathArray = path.split("/").splice(1);
     
-    console.log('into the function of Get Folder Content in utils ');
+    console.log('>>>>> path arrya ', pathArray);
 
     let tempFolderContent = null;
     for (let i = 0; i < pathArray.length; i++) {
@@ -16,7 +13,10 @@ export const getFolderContent = path => {
         tempFolderContent = database.children;
       } else {
         const nextFolder = tempFolderContent.find(
-          item => item.name === currentPathName,
+          item => {
+            console.log(">>>>>", item, currentPathName);
+            return item.name === currentPathName
+          },
         );
         tempFolderContent = nextFolder.children;
       }
