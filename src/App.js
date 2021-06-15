@@ -4,12 +4,18 @@ import './App.css'
 import '../node_modules/swagger-ui/dist/swagger-ui.css'
 // import Navbar from './Navbar.js'
 import {BrowserRouter as Router, Route} from "react-router-dom";
-
+import styled from "styled-components";
 // import Sidebar from './Sidebar.js';
 
 import Folder from './Folder.js';
 import GlobalStyles from './styles/GlobalStyles';
 import Navbar from "./Navbar";
+
+const StyledTree = styled.div`
+    line-height: 1.8;
+  `;
+
+
 
 class App extends Component {
 
@@ -38,7 +44,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <GlobalStyles/>
+        {/* <GlobalStyles/> */}
+
+        <StyledTree>
+				<div className="side-bar" >
         <Router>
           <Route
             path="/"
@@ -49,13 +58,14 @@ class App extends Component {
                 history={history}
                 match={match}
                 location={location}
-                name="public"
+                name="Myntra"
                 path="/public"
               />
             )}
           />
         </Router>
-
+        </div>
+        </StyledTree>
         <div className = "menu" >
           <div className = "heading">
             <Navbar path = {this.state.definitionLink} />

@@ -34,36 +34,21 @@ class Sidebar extends Component {
 			<>
                 <StyledTree>
 				<div className="side-bar" >
-
-					{/* {this.structure.IsDir === true ? (
-						<Folder
-							{...this.structure}
-							update={updateDefinitionLink}
-						/>
-					) : (
-						<File
-							{...this.structure}
-							update={updateDefinitionLink}
-						/>
-					)} */}
-
-			<Router>
-            <Route
-              path="/"
-              render={({ history, location, match }) => (
-                <Folder
-                  depth={0}
-                  history={history}
-                  match={match}
-                  location={location}
-                  name = "storefront-display"
-     			  path = "public/storefront-display"
-                />
-              )}
-            />
-          </Router>
-
-
+						{/* <Router>
+							<Route
+							path="/"
+							render={({ history, location, match }) => (
+								<Folder
+								depth={0}
+								history={history}
+								match={match}
+								location={location}
+								name = "storefront-display"
+								path = "public/storefront-display"
+								/>
+							)}
+							/>
+						</Router> */}
 				</div>
                 </StyledTree>
 			</>

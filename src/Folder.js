@@ -3,6 +3,25 @@ import PropTypes from "prop-types";
 import './Folder.css';
 import FolderContent from "./FolderContent";
 import {Route} from "react-router-dom";
+import styled from "styled-components";
+
+import { FcOpenedFolder,FcFolder } from "react-icons/fc"
+import { AiOutlineFile, AiOutlineFolder} from "react-icons/ai";
+
+import { StyledButton } from "./styles/GlobalStyles";
+
+const StyledFolder = styled.div`
+padding-left: 20px;
+
+.folder--label {
+  display: flex;
+  align-items: center;
+  span {
+	margin-left: 5px;
+  }
+}
+`;
+
 
 const propTypes = {
   path: PropTypes.string.isRequired,
@@ -60,13 +79,15 @@ class Folder extends Component {
     //const isOpen = pathname.includes(path);
     return (
       <Fragment>
+		  <StyledFolder>
         <div onClick={this.onOpenFolder} depth={depth}>
           {isOpen ? (
-            <i className="fas fa-folder-open medium-yellow fa-lg"/>
+			  <FcOpenedFolder />
           ) : (
-            <i className="fas fa-folder medium-yellow fa-lg"/>
+			  <FcFolder />
           )}{" "}
-          {name}
+		  {/* <AiOutlineFolder /> */}
+          <span>{name}</span>
         </div>
 
         <Route
@@ -83,6 +104,8 @@ class Folder extends Component {
             />
           )}
         />
+		</StyledFolder>
+
       </Fragment>
     );
   }

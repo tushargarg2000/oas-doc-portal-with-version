@@ -38,7 +38,7 @@ export const StyledButton = styled.button`
   color: black;
   padding: 0;
   margin-bottom: 5px;
-  font-size: 12px;
+  font-size: 15px;
   margin-left: ${props => `${props.depth * 15}px`};
   i {
     margin-right: 15px;

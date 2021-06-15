@@ -7,6 +7,7 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"strings"
 )
 
 type File struct {
@@ -23,29 +24,54 @@ type File struct {
 
 func iterateJSON(path string) {
 
-	fmt.Println(path)
+	//fmt.Println(path)
 	//c := '/'
 	//path = string(c) + path
 
-	//fmt.Println(path)
+	//path = strings.TrimLeft(path, "/")
+
+	//path = "public"
 	rootOSFile, _ := os.Stat(path)
 	//fmt.Println(rootOSFile)
+
+	rootOSFile1, _ := os.Stat("public")
+
 	rootFile := toFile(rootOSFile, path) //start with root file
+	rootFile1 := toFile(rootOSFile1, "public")
+
+	fmt.Println("root file is ", rootFile)
+	fmt.Println("root file 1 is ", rootFile1)
 	stack := []*File{rootFile}
 
 	for len(stack) > 0 { //until stack is empty,
 		file := stack[len(stack)-1] //pop entry from stack
 		stack = stack[:len(stack)-1]
-		children, _ := ioutil.ReadDir(file.Path) //get the children of entry
+
+		//fmt.Println("file we are getting ", file)
+
+		temp := file.Path
+		temp = strings.TrimLeft(temp, "/")
+
+		//fmt.Println("file path after trimming", file.Path)
+		//fmt.Println("file yahan prr jo bn gyi hai vo hai ", file)
+
+		children, _ := ioutil.ReadDir(temp) //get the children of entry
+
+		//fmt.Println(file.Path)
 
 		for _, chld := range children { //for each child
-			child := toFile(chld, filepath.Join(file.Path, chld.Name())) //turn it into a File object
-			file.Children = append(file.Children, child)                 //append it to the children of the current file popped
-			stack = append(stack, child)                                 //append the child to the stack, so the same process can be run again
+			child := toFile(chld, filepath.Join(temp, chld.Name())) //turn it into a File object
+			//fmt.Println("each child is ", child, "file is ", file)
+			file.Children = append(file.Children, child)
+			//append it to the children of the current file popped
+
+			stack = append(stack, child) //append the child to the stack, so the same process can be run again
 		}
 	}
+	rootFile1.Children = append(rootFile1.Children, rootFile)
+	output, _ := json.MarshalIndent(rootFile1, "", "     ")
+	//fmt.Println(string(output))
 
-	output, _ := json.MarshalIndent(rootFile, "", "     ")
 	//fmt.Println(string(output))
 
 	err := ioutil.WriteFile("src/structure_file.json", output, 0644)
@@ -56,6 +82,10 @@ func iterateJSON(path string) {
 }
 
 func toFile(file os.FileInfo, path string) *File {
+
+	fmt.Println(path)
+	c := '/'
+	path = string(c) + path
 
 	directoryType := "file"
 

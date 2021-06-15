@@ -7,7 +7,7 @@
 .side-bar {
   display: flex;
   flex-direction: column;
-  width: 15vw;
+  width: 20vw;
   height: 100vh;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
 }
@@ -53,7 +53,7 @@
 #api-data-redoc{
 
   float: left;
-  width: 85vw;
+  width: 80vw;
   overflow: auto;
   height: 85vh;
 
@@ -62,7 +62,7 @@
 #api-data-swagger{
 
   float: left;
-  width: 85vw;
+  width: 80vw;
   overflow: auto;
   height: 85vh;
 

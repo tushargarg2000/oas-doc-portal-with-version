@@ -31,7 +31,6 @@ const StyledFile = styled.div`
     }
   `;
 
-
 const propTypes = {
   path: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
@@ -66,9 +65,9 @@ class File extends Component {
     const iconClass = getClassWithColor(name);
     // const iconClass = getClassWithColor(name);
     return (
-      <StyledButton depth={depth} onClick={this.onFileClick}>
-        <i className={iconClass}/> {name}
-      </StyledButton>
+      <StyledFile depth={depth} onClick={this.onFileClick}>
+        <i className={iconClass}/><span>{name}</span>
+      </StyledFile>
     );
   }
 }

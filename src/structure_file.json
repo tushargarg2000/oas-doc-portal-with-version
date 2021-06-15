@@ -1,13 +1,93 @@
 {
-     "path": "/public",
+     "IsDir": true,
      "name": "public",
-     "type": "folder",
+     "path": "/public",
      "children": [
           {
                "IsDir": true,
                "name": "storefront-display",
                "path": "/public/storefront-display",
                "children": [
+                    {
+                         "IsDir": true,
+                         "name": "Test_service",
+                         "path": "/public/storefront-display/Test_service",
+                         "children": [],
+                         "type": "folder"
+                    },
+                    {
+                         "IsDir": true,
+                         "name": "cart",
+                         "path": "/public/storefront-display/cart",
+                         "children": [],
+                         "type": "folder"
+                    },
+                    {
+                         "IsDir": true,
+                         "name": "new_service",
+                         "path": "/public/storefront-display/new_service",
+                         "children": [
+                              {
+                                   "IsDir": false,
+                                   "name": "CHANGELOG.md",
+                                   "path": "/public/storefront-display/new_service/CHANGELOG.md",
+                                   "children": [],
+                                   "type": "file"
+                              },
+                              {
+                                   "IsDir": false,
+                                   "name": "README.md",
+                                   "path": "/public/storefront-display/new_service/README.md",
+                                   "children": [],
+                                   "type": "file"
+                              },
+                              {
+                                   "IsDir": true,
+                                   "name": "__tests__",
+                                   "path": "/public/storefront-display/new_service/__tests__",
+                                   "children": [
+                                        {
+                                             "IsDir": false,
+                                             "name": "new_service.test.js",
+                                             "path": "/public/storefront-display/new_service/__tests__/new_service.test.js",
+                                             "children": [],
+                                             "type": "file"
+                                        }
+                                   ],
+                                   "type": "folder"
+                              },
+                              {
+                                   "IsDir": true,
+                                   "name": "lib",
+                                   "path": "/public/storefront-display/new_service/lib",
+                                   "children": [
+                                        {
+                                             "IsDir": false,
+                                             "name": "new_service.js",
+                                             "path": "/public/storefront-display/new_service/lib/new_service.js",
+                                             "children": [],
+                                             "type": "file"
+                                        }
+                                   ],
+                                   "type": "folder"
+                              },
+                              {
+                                   "IsDir": false,
+                                   "name": "package.json",
+                                   "path": "/public/storefront-display/new_service/package.json",
+                                   "children": [],
+                                   "type": "file"
+                              },
+                              {
+                                   "IsDir": false,
+                                   "name": "wallet.yaml",
+                                   "path": "/public/storefront-display/new_service/wallet.yaml",
+                                   "children": [],
+                                   "type": "file"
+                              }
+                         ],
+                         "type": "folder"
+                    },
                     {
                          "IsDir": true,
                          "name": "payements",
@@ -37,6 +117,21 @@
                               },
                               {
                                    "IsDir": true,
+                                   "name": "__tests__",
+                                   "path": "/public/storefront-display/payements/__tests__",
+                                   "children": [
+                                        {
+                                             "IsDir": false,
+                                             "name": "payements.test.js",
+                                             "path": "/public/storefront-display/payements/__tests__/payements.test.js",
+                                             "children": [],
+                                             "type": "file"
+                                        }
+                                   ],
+                                   "type": "folder"
+                              },
+                              {
+                                   "IsDir": true,
                                    "name": "asgard",
                                    "path": "/public/storefront-display/payements/asgard",
                                    "children": [
@@ -46,8 +141,37 @@
                                              "path": "/public/storefront-display/payements/asgard/asgard.yaml",
                                              "children": [],
                                              "type": "file"
+                                        },
+                                        {
+                                             "IsDir": true,
+                                             "name": "version",
+                                             "path": "/public/storefront-display/payements/asgard/version",
+                                             "children": [],
+                                             "type": "folder"
                                         }
                                    ],
+                                   "type": "folder"
+                              },
+                              {
+                                   "IsDir": true,
+                                   "name": "lib",
+                                   "path": "/public/storefront-display/payements/lib",
+                                   "children": [
+                                        {
+                                             "IsDir": false,
+                                             "name": "payements.js",
+                                             "path": "/public/storefront-display/payements/lib/payements.js",
+                                             "children": [],
+                                             "type": "file"
+                                        }
+                                   ],
+                                   "type": "folder"
+                              },
+                              {
+                                   "IsDir": true,
+                                   "name": "new_service",
+                                   "path": "/public/storefront-display/payements/new_service",
+                                   "children": [],
                                    "type": "folder"
                               },
                               {
@@ -62,6 +186,13 @@
                                    "name": "pps",
                                    "path": "/public/storefront-display/payements/pps",
                                    "children": [
+                                        {
+                                             "IsDir": true,
+                                             "name": "archive",
+                                             "path": "/public/storefront-display/payements/pps/archive",
+                                             "children": [],
+                                             "type": "folder"
+                                        },
                                         {
                                              "IsDir": false,
                                              "name": "package.json",
@@ -138,5 +269,6 @@
                ],
                "type": "folder"
           }
-     ]
+     ],
+     "type": "folder"
 }
