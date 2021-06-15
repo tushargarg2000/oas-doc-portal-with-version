@@ -12,7 +12,7 @@
 
  import { getFolderContent } from "./utils";
 
- 
+
  const propTypes = {
    /** Name of folder */
    name: PropTypes.string.isRequired,
@@ -51,27 +51,36 @@
  class FolderContent extends React.Component {
    state = { loading: false, error: null, content: [] };
  
-   async componentDidMount() {
+
+    async componentDidMount() {
      
      const { path } = this.props;
+     console.log('we are in the folder content Folder checking if path has reached or not',path);
      let content = JSON.parse(localStorage.getItem(path));
+     console.log('the content we have initally is ',content);
      try {
        this.setState({ loading: true });
        if (!content) {
          content = getFolderContent(path);
+         
          localStorage.setItem(path, JSON.stringify(content));
        }
        this.setState({ content, loading: false });
-     } catch (error) {
+     }
+      catch (error) {
        console.warn("Error: ", error);
        this.setState({ error, loading: false });
      }
+     console.log('Content that is being called is ',content);
    }
  
    render() {
      const { error, content, loading } = this.state;
      const { name, depth, history, location, match } = this.props;
      /* Show error if broken */
+
+    console.log('content in FolderContent is ',content);
+
      if (error) {
        return (
          <p style={{ fontWeight: "bold", color: "red" }}>

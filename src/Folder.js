@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component ,Fragment} from "react";
 import File from "./File";
 import './Folder.css';
 import styled from "styled-components";
@@ -10,6 +10,8 @@ import { getFolderContent } from "./utils";
 import FolderContent from "./FolderContent";
 import PropTypes from "prop-types";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+
+import { StyledButton } from "./styles/GlobalStyles";
 
 const StyledFolder = styled.div`
 padding-left: 20px;
@@ -23,10 +25,10 @@ padding-left: 20px;
 }
 `;
 
-const Collapsible = styled.div`
-    height: ${p => (p.isOpen ? "auto" : "0")};
-    overflow: hidden;
-`;
+// const Collapsible = styled.div`
+//     height: ${p => (p.isOpen ? "auto" : "0")};
+//     overflow: hidden;
+// `;
 
 
 const propTypes = {
@@ -61,12 +63,14 @@ const propTypes = {
 
 
 class Folder extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			isopen: false,
-		};
-	}
+	
+	// constructor(props) {
+	// 	super(props);
+	// 	this.state = {
+	// 		isopen: false,
+	// 	};
+	// }
+
 
 	// openup = () => {
 	// 	const { isopen } = this.state;
@@ -88,12 +92,9 @@ class Folder extends Component {
 		// Closing folder (going back up to parent url/path)
 		
 		
-		
 		return history.push(match.url);
 	};
 
-
-	
 
 	render() {
 
@@ -107,53 +108,37 @@ class Folder extends Component {
 		//const { isopen } = this.state;
 
 		const isOpen = pathname.includes(path);
-		
+		console.log('check is open',isOpen);
+		//const isOpen = pathname.includes(path);
 		return (
-			<>
-				<StyledFolder>
-				
-				<div onClick={this.onOpenFolder} depth={depth}>
-				<AiOutlineFolder />
-          		<span>blah balha blah{ name }</span>
-				</div>
-				
-				{/* {isopen &&
-					children.map((value, index) => {
-						
-						return value.IsDir === true ? (
-							<Folder {...value} update={update} />
-						) : (
-							<File {...value} update={update} />
-						);
-					})} */}
+		<Fragment>
+			<div onClick={this.onOpenFolder} depth={depth}>
+			{isOpen ? (
+				<i className="fas fa-folder-open medium-yellow fa-lg" />
+			) : (
+				<i className="fas fa-folder medium-yellow fa-lg" />
+			)}{" "}
+			{name}
+			</div>
 
-				{isOpen ? (
-					<i className="fas fa-folder-open medium-yellow fa-lg" />
-				) : (
-					<i className="fas fa-folder medium-yellow fa-lg" />
-				)}{" "}
-          		{name}
-
-				</StyledFolder>
-				
-				<Route
-					path={`${path}`}
-					render={({ history, match, location }) => (
-						<FolderContent
-						depth={depth}
-						history={history}
-						match={match}
-						location={location}
-						name={name}
-						path={path}
-						/>
-					)}
-       			/>
-
-
-			</>
+			<Route
+			path={`${path}`}
+			render={({ history, match, location }) => (
+				<FolderContent
+				depth={depth}
+				history={history}
+				match={match}
+				location={location}
+				name={name}
+				path={path}
+				/>
+			)}
+			/>
+		</Fragment>
 		);
 	}
 }
+
+Folder.propTypes = propTypes;
 
 export default Folder;

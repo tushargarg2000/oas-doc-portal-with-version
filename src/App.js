@@ -13,7 +13,7 @@ import {Route,Router} from 'react-router-dom';
 import Sidebar2 from './Sidebar2';
 
 import Sidebar from './Sidebar.js';
-
+//import Sidebar from './Sidebar3';
 
 
 class App extends Component {
@@ -52,9 +52,11 @@ class App extends Component {
         <Sidebar
           updateDefinitionLink = {this.updateDefinitionLink}
         />
+
+
         
 
-        <Sidebar2 updateDefinitionLink = {this.updateDefinitionLink}/>
+        {/* <Sidebar2 updateDefinitionLink = {this.updateDefinitionLink}/> */}
         
         <div className = "menu" > 
             <div className = "heading">

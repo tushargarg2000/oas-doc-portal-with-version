@@ -17,6 +17,7 @@ const StyledTree = styled.div`
   `;
 
 class Sidebar extends Component {
+	
 	structure = require("./structure_file.json");
 
 	constructor(props) {
@@ -29,7 +30,7 @@ class Sidebar extends Component {
 	render() {
 
 		const { updateDefinitionLink } = this.props;
-		//console.log(this.structure);
+		console.log(this.structure);
 
 		return (
 			<>
