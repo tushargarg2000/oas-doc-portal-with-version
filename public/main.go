@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+
 	"io/ioutil"
 	"log"
 	"os"
@@ -15,13 +16,16 @@ type File struct {
 	//LinksTo      string    `json:"LinksTo"`
 	//Size         int64     `json:"Size"`
 	Name     string  `json:"name"`
-	Path     string  `json:"paths"`
-	Children []*File `json:"childrens"`
+	Path     string  `json:"path"`
+	Children []*File `json:"children"`
+	Type     string  `json:"type"`
 }
 
 func iterateJSON(path string) {
 
+	//fmt.Println(path)
 	rootOSFile, _ := os.Stat(path)
+	//fmt.Println(rootOSFile)
 	rootFile := toFile(rootOSFile, path) //start with root file
 	stack := []*File{rootFile}
 
@@ -40,7 +44,7 @@ func iterateJSON(path string) {
 	output, _ := json.MarshalIndent(rootFile, "", "     ")
 	//fmt.Println(string(output))
 
-	err := ioutil.WriteFile("../src/structure_file.json", output, 0644)
+	err := ioutil.WriteFile("src/structure_file.json", output, 0644)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -49,12 +53,18 @@ func iterateJSON(path string) {
 
 func toFile(file os.FileInfo, path string) *File {
 
+	directoryType := "file"
+
+	if file.IsDir() {
+		directoryType = "folder"
+	}
 	JSONFile := File{ //ModifiedTime: file.ModTime(),
 		IsDir: file.IsDir(),
 		//Size:     file.Size(),
 		Name:     file.Name(),
 		Path:     path,
 		Children: []*File{},
+		Type:     directoryType,
 	}
 
 	// if file.Mode()&os.ModeSymlink == os.ModeSymlink {
@@ -66,6 +76,6 @@ func toFile(file os.FileInfo, path string) *File {
 
 func main() {
 
-	iterateJSON("./storefront-display")
+	iterateJSON("public/storefront-display")
 
 }

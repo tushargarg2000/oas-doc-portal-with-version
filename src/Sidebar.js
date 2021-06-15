@@ -6,6 +6,11 @@ import styled from "styled-components";
 import { AiOutlineFile, AiOutlineFolder} from "react-icons/ai";
 import { DiJavascript1, DiCss3Full, DiHtml5, DiReact } from "react-icons/di";
 
+import PropTypes from "prop-types";
+
+
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
 
 const StyledTree = styled.div`
     line-height: 1.8;
@@ -24,20 +29,14 @@ class Sidebar extends Component {
 	render() {
 
 		const { updateDefinitionLink } = this.props;
-		console.log(this.structure);
-		debugger;
-
-        // const StyledTree = styled.div`
-        // line-height: 1.8;
-        // `;
-
+		//console.log(this.structure);
 
 		return (
 			<>
                 <StyledTree>
 				<div className="side-bar" >
 
-					{this.structure.IsDir === true ? (
+					{/* {this.structure.IsDir === true ? (
 						<Folder
 							{...this.structure}
 							update={updateDefinitionLink}
@@ -47,7 +46,25 @@ class Sidebar extends Component {
 							{...this.structure}
 							update={updateDefinitionLink}
 						/>
-					)}
+					)} */}
+
+			<Router>
+            <Route
+              path="/"
+              render={({ history, location, match }) => (
+                <Folder
+                  depth={0}
+                  history={history}
+                  match={match}
+                  location={location}
+                  name = "storefront-display"
+     			  path = "public/storefront-display"
+                />
+              )}
+            />
+          </Router>
+
+
 				</div>
                 </StyledTree>
 			</>

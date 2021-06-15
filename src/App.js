@@ -10,43 +10,10 @@ import SwaggerUI from "swagger-ui-react"
 import "swagger-ui-react/swagger-ui.css"
 import Navbar from './Navbar.js'
 import {Route,Router} from 'react-router-dom';
-
+import Sidebar2 from './Sidebar2';
 
 import Sidebar from './Sidebar.js';
 
-function Type(props) {
-
-    if(props.value){
-      return (
-        <div id = "api-data-redoc" >
-        <RedocStandalone specUrl= {props.path} 
-        options={{
-            nativeScrollbars: false,
-            theme: { colors: { primary: { main: '#dd5522' } } },
-            // scroll-behavior: smooth
-        }}
-        
-        />
-
-        </div>
-
-      );
-    }
-    else{
-      return(
-
-        <div id = "api-data-swagger" >
-            
-            <SwaggerUI url= {props.path} />
-
-        </div>
-
-      );
-
-    }
-
-
-}
 
 
 class App extends Component {
@@ -85,8 +52,9 @@ class App extends Component {
         <Sidebar
           updateDefinitionLink = {this.updateDefinitionLink}
         />
+        
 
-        {/* <Sidebar1 updateDefinitionLink = {this.updateDefinitionLink}/> */}
+        <Sidebar2 updateDefinitionLink = {this.updateDefinitionLink}/>
         
         <div className = "menu" > 
             <div className = "heading">
