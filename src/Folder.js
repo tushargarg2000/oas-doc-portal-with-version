@@ -9,8 +9,6 @@ import { getFolderContent } from "./utils";
 
 import FolderContent from "./FolderContent";
 
-import FolderContent1 from "./FolderContent1";
-
 import PropTypes from "prop-types";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -66,38 +64,20 @@ const propTypes = {
 
 
 class Folder extends Component {
-	
-	// constructor(props) {
-	// 	super(props);
-	// 	this.state = {
-	// 		isopen: false,
-	// 	};
-	// }
-
-
-	// openup = () => {
-	// 	const { isopen } = this.state;
-
-	// 	this.setState({
-	// 		isopen: !isopen,
-	// 	});
-	// };
 
 	onOpenFolder = () => {
 
 		const { path, history, match, location } = this.props;
 
-		console.log('Hii welcome ',this.props);
+		//console.log('Hii welcome ',this.props);
 		// If location pathname (URL) matches match.url (arent routes path) are the same: OPEN DIRECTORY
 		if (location.pathname === match.url) return history.push(path);
 		// when a sibling folder is open and a folder is clicked, go to this new path
 		if (!location.pathname.includes(path)) return history.push(path);
 		// Closing folder (going back up to parent url/path)
 		
-		
 		return history.push(match.url);
 	};
-
 
 	render() {
 
@@ -108,9 +88,7 @@ class Folder extends Component {
 			depth,
 		} = this.props;
 
-		//const { name, path, childrens, update } = this.props;
-		//const { isopen } = this.state;
-
+		
 		const isOpen = pathname.includes(path);
 		console.log('check is open',isOpen);
 		//const isOpen = pathname.includes(path);
@@ -137,8 +115,7 @@ class Folder extends Component {
 				name={name}
 				path={path}
 				/>
-				// <FolderContent1 />
-				//foldercontent
+				
 			)}
 			/>
 		</Fragment>

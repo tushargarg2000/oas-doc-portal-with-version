@@ -49,7 +49,8 @@
  };
  
  class FolderContent extends React.Component {
-   state = { loading: false, error: null, content: [] };
+   
+  state = { loading: false, error: null, content: [] };
  
 
     async componentDidMount() {
@@ -71,21 +72,13 @@
        console.warn("Error: ", error);
        this.setState({ error, loading: false });
      }
+
      console.log('Content that is being called is ',content);
    }
  
    render() {
      const { error, content, loading } = this.state;
      const { name, depth, history, location, match } = this.props;
-     /* Show error if broken */
-
-    //  console.log('content in FolderContent is ',content);
-
-    // return (
-    //     <div>
-    //       This is coming from Folder content
-    //     </div>
-    // );
 
      if (error) {
        return (
