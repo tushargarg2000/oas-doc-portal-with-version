@@ -57,7 +57,6 @@ class Folder extends Component {
     } = this.props;
 
     const isOpen = pathname.includes(path);
-    console.log('check is open', isOpen, path);
     //const isOpen = pathname.includes(path);
     return (
       <Fragment>
@@ -74,6 +73,7 @@ class Folder extends Component {
           path={`${path}`}
           render={({history, match, location}) => (
             <FolderContent
+              updateDefinitionLink={this.props.updateDefinitionLink}
               depth={depth}
               history={history}
               match={match}

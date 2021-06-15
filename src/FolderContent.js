@@ -54,11 +54,8 @@ class FolderContent extends React.Component {
 
   componentDidMount() {
     const {path} = this.props;
-    console.log('--------------------------', path);
     // let content = JSON.parse(localStorage.getItem(path));
     let content = '';
-    console.log('------------ content ', content);
-
     try {
       this.setState({loading: true});
       if (!content) {
@@ -76,8 +73,6 @@ class FolderContent extends React.Component {
 
     const {error, content, loading} = this.state;
     const {name, depth, history, location, match} = this.props;
-
-    console.log(';;;;;;;;;;;;;; folder content render ', content);
     if (error) {
       return (
         <p style={{fontWeight: "bold", color: "red"}}>
@@ -96,6 +91,7 @@ class FolderContent extends React.Component {
         return (
           <div key={foldOrFile.name}>
             <Folder
+              updateDefinitionLink={this.props.updateDefinitionLink}
               depth={depth + 1}
               {...foldOrFile}
               history={history}
@@ -107,7 +103,11 @@ class FolderContent extends React.Component {
       }
       return (
         <div key={foldOrFile.name}>
-          <File depth={depth + 1} {...foldOrFile} history={history}/>
+          <File
+            updateDefinitionLink={this.props.updateDefinitionLink}
+            depth={depth + 1}
+            {...foldOrFile}
+            history={history}/>
         </div>
       );
     });

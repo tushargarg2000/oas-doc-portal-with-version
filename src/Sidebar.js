@@ -30,8 +30,6 @@ class Sidebar extends Component {
 	render() {
 
 		const { updateDefinitionLink } = this.props;
-		console.log(this.structure);
-
 		return (
 			<>
                 <StyledTree>

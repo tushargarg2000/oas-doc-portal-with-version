@@ -53,13 +53,15 @@ class File extends Component {
 
   onFileClick = () => {
     const {path, history} = this.props;
-    update(path);
+    // update(path);
+
+    this.props.updateDefinitionLink(path)
+
     return history.push(path);
 
   };
 
   render() {
-    console.log(";;; inside file")
     const {name, depth} = this.props;
     const iconClass = getClassWithColor(name);
     // const iconClass = getClassWithColor(name);

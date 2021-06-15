@@ -6,12 +6,12 @@ import SwaggerUI from "swagger-ui-react"
 import "swagger-ui-react/swagger-ui.css"
 
 function Type(props) {
-
   if (props.value) {
     return (
       <div id="api-data-swagger">
-        {/*<SwaggerUI url={props.path}/>*/}
-        <SwaggerUI url="./storefront-display/payements/asgard/asgard.yaml"/>
+        <SwaggerUI url={props.path}/>
+        {/*<SwaggerUI url="./storefront-display/payements/asgard/asgard.yaml"/>*/}
+       {/*<SwaggerUI url="http://localhost:3000/storefront-display/payements/pps/pps.yaml"/>*/}
       </div>
     );
   } else {
@@ -33,20 +33,19 @@ function Type(props) {
 }
 
 class Navbar extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {checked: false};
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(checked) {
     this.setState({checked});
-
   }
 
   render() {
+    console.log(";;;", this.props)
     return (
-
       <div>
         <div className="big-div">
           <div className="api-heading">
@@ -60,9 +59,7 @@ class Navbar extends Component {
               <h2>Read Docs</h2>
             </div>
             <label>
-
               <label htmlFor="material-switch" className="button-div">
-
                 <Switch
                   checked={this.state.checked}
                   onChange={this.handleChange}
@@ -79,7 +76,6 @@ class Navbar extends Component {
                   width={60}
                   className="heading-2"
                   id="material-switch"
-
                 />
               </label>
 

@@ -12,9 +12,6 @@
  class FolderContent1 extends React.Component{
 
     render(){
-
-        console.log('this is folderContent1');
-    
         return (
             <div>
                 FolderContent1

@@ -5,9 +5,6 @@ import { DiJavascript1, DiCss3Full, DiHtml5, DiReact } from "react-icons/di";
 
 
 const Sidebar1 = (props) => {
-
-  console.log(props);
-
   const FILE_ICONS = {
     js: <DiJavascript1 />,
     css: <DiCss3Full />,
@@ -45,8 +42,6 @@ const Sidebar1 = (props) => {
 
   const File = ({name,paths}) => {
 
-    //console.log(props);
-    //console.log(paths);
     let ext = name.split(".")[1];
 
     const clickMe = () => {
