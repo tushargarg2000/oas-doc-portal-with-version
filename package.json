@@ -29,7 +29,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "go run public/main.go && react-scripts start",
+    "start_1": "go run public/main.go && react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
