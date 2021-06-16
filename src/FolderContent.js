@@ -87,6 +87,27 @@ class FolderContent extends React.Component {
 
     /* Render all folder content (subfolders and files)*/
     return content.map(foldOrFile => {
+
+      if(foldOrFile.type === "file")
+      {
+        const temp = foldOrFile.name;
+        //console.log(temp);
+        const extension = temp.split(".").pop(); //checking if extension is valid with this or not
+        //console.log("extension is ",extension);
+        if(extension=="yaml"){
+          return (
+          <div key={foldOrFile.name}>
+          <File
+            updateDefinitionLink={this.props.updateDefinitionLink}
+            depth={depth + 1}
+            {...foldOrFile}
+            history={history}/>
+          </div>
+          );
+        }
+
+      }
+
       if (foldOrFile.type === "folder") {
         return (
           <div key={foldOrFile.name}>
@@ -101,15 +122,15 @@ class FolderContent extends React.Component {
           </div>
         );
       }
-      return (
-        <div key={foldOrFile.name}>
-          <File
-            updateDefinitionLink={this.props.updateDefinitionLink}
-            depth={depth + 1}
-            {...foldOrFile}
-            history={history}/>
-        </div>
-      );
+      // return (
+      //   <div key={foldOrFile.name}>
+      //     <File
+      //       updateDefinitionLink={this.props.updateDefinitionLink}
+      //       depth={depth + 1}
+      //       {...foldOrFile}
+      //       history={history}/>
+      //   </div>
+      // );
     });
   }
 }

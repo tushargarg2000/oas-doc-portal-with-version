@@ -9,7 +9,7 @@ function Type(props) {
 
   const copyPath =  props.path;
   const extension = copyPath.split(".").pop(); //checking if extension is valid with this or not
-  console.log("extension is ",extension);
+  //console.log("extension is ",extension);
   if(extension!="yaml"){
   return (
     <div className = "extension">

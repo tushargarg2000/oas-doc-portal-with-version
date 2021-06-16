@@ -119,6 +119,13 @@
                               }
                          ],
                          "type": "folder"
+                    },
+                    {
+                         "IsDir": false,
+                         "name": "try.yups",
+                         "path": "/public/storefront-display/try.yups",
+                         "children": [],
+                         "type": "file"
                     }
                ],
                "type": "folder"

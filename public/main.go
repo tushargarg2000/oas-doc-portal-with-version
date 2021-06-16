@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"log"
 	"os"
@@ -84,7 +83,7 @@ func iterateJSON(path string) {
 
 func toFile(file os.FileInfo, path string) *File {
 
-	fmt.Println(path)
+	//fmt.Println(path)
 	c := '/'
 	path = string(c) + path
 
