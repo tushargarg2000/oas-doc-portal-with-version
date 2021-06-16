@@ -1,6 +1,6 @@
 openapi: 3.0.0
 servers:
-  - description: SwaggerHub API Auto Mocking and Trying using Lerna
+  - description: SwaggerHub API Auto Mocking .1 for Lerna
     url: 'https://virtserver.swaggerhub.com/myntra179/FirstApi/1.0.0'
 info:
   description: This is a simple API
