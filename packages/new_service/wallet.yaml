@@ -1,6 +1,6 @@
 openapi: 3.0.0
 servers:
-  - description: SwaggerHub _----Lerna 
+  - description: SwaggerHub swapnil Pr tetsong 
     url: 'https://virtserver.swaggerhub.com/myntra179/FirstApi/1.0.0'
 info:
   description: This is a simple API
