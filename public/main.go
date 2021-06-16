@@ -33,10 +33,10 @@ func iterateJSON(path string) {
 	rootOSFile, _ := os.Stat(path)
 	//fmt.Println(rootOSFile)
 
-	rootOSFile1, _ := os.Stat("public")
+	rootOSFile1, _ := os.Stat("packages")
 
 	rootFile := toFile(rootOSFile, path) //start with root file
-	rootFile1 := toFile(rootOSFile1, "public")
+	rootFile1 := toFile(rootOSFile1, "packages")
 
 	//fmt.Println("root file is ", rootFile)
 	//fmt.Println("root file 1 is ", rootFile1)
@@ -69,6 +69,7 @@ func iterateJSON(path string) {
 	}
 
 	rootFile1.Children = append(rootFile1.Children, rootFile)
+
 	output, _ := json.MarshalIndent(rootFile1, "", "     ")
 	//fmt.Println(string(output))
 
@@ -111,6 +112,6 @@ func toFile(file os.FileInfo, path string) *File {
 
 func main() {
 
-	iterateJSON("public/storefront-display")
+	iterateJSON("packages/storefront-display")
 
 }

@@ -1,6 +1,6 @@
 {
   "packages": [
-    "public/storefront-display/*"
+    "packages/*"
   ],
   "version": "independent"
 }

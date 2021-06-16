@@ -28,6 +28,7 @@ const StyledFile = styled.div`
     align-items: center;
     span {
       margin-left: 5px;
+      cursor : pointer;
     }
   `;
 

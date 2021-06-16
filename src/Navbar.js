@@ -7,7 +7,13 @@ import "swagger-ui-react/swagger-ui.css"
 
 function Type(props) {
 
-  const copyPath =  props.path;
+  var copyPath =  props.path;
+  copyPath = copyPath;
+
+  console.log("new updated path is ",props.path);
+
+  console.log("path that is rendered is ",copyPath);
+
   const extension = copyPath.split(".").pop(); //checking if extension is valid with this or not
   //console.log("extension is ",extension);
   if(extension!="yaml"){
@@ -23,7 +29,7 @@ function Type(props) {
   else if (props.value) {
     return (
       <div id="api-data-swagger">
-        <SwaggerUI url={props.path}/>
+        <SwaggerUI url={copyPath}/>
         {/*<SwaggerUI url="./storefront-display/payements/asgard/asgard.yaml"/>*/}
        {/*<SwaggerUI url="http://localhost:3000/storefront-display/payements/pps/pps.yaml"/>*/}
       </div>
@@ -31,7 +37,7 @@ function Type(props) {
   } else {
     return (
       <div id="api-data-redoc">
-        <RedocStandalone specUrl={props.path}
+        <RedocStandalone specUrl={copyPath}
                          options={{
                            nativeScrollbars: false,
                            theme: {colors: {primary: {main: '#dd5522'}}},

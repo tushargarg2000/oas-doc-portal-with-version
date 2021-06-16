@@ -18,7 +18,11 @@ padding-left: 20px;
   align-items: center;
   span {
 	margin-left: 5px;
+  cursor : pointer;
   }
+}
+span{
+  cursor : pointer;
 }
 `;
 

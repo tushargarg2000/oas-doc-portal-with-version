@@ -24,7 +24,7 @@ class App extends Component {
     this.state = {
       //checked: false,
       // definitionLink: "https://petstore3.swagger.io/api/v3/openapi.json"
-      definitionLink: window.location.pathname.replace("/public", "http://localhost:3000/")
+      definitionLink: window.location.pathname.replace("/packages", "http://localhost:3000/")
     }
     //this.handleChange = this.handleChange.bind(this);
     this.updateDefinitionLink = this.updateDefinitionLink.bind(this)
@@ -32,7 +32,8 @@ class App extends Component {
 
   updateDefinitionLink(newLink) {
     this.setState({
-      definitionLink: newLink.replace("/public", "http://localhost:3000/")
+      definitionLink: newLink.replace("/packages", "http://localhost:3000/")
+      //definitionLink: newLink.replace (/^/,"http://localhost:3000")
     })
   }
 
@@ -59,7 +60,7 @@ class App extends Component {
                 match={match}
                 location={location}
                 name="Myntra"
-                path="/public"
+                path="/packages"
               />
             )}
           />

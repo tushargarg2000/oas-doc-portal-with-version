@@ -1,41 +1,41 @@
 {
      "IsDir": true,
-     "name": "public",
-     "path": "/public",
+     "name": "packages",
+     "path": "/packages",
      "children": [
           {
                "IsDir": true,
                "name": "storefront-display",
-               "path": "/public/storefront-display",
+               "path": "/packages/storefront-display",
                "children": [
                     {
                          "IsDir": true,
                          "name": "cart",
-                         "path": "/public/storefront-display/cart",
+                         "path": "/packages/storefront-display/cart",
                          "children": [],
                          "type": "folder"
                     },
                     {
                          "IsDir": true,
                          "name": "payements",
-                         "path": "/public/storefront-display/payements",
+                         "path": "/packages/storefront-display/payements",
                          "children": [
                               {
                                    "IsDir": true,
                                    "name": "asgard",
-                                   "path": "/public/storefront-display/payements/asgard",
+                                   "path": "/packages/storefront-display/payements/asgard",
                                    "children": [
                                         {
                                              "IsDir": false,
                                              "name": "asgard.yaml",
-                                             "path": "/public/storefront-display/payements/asgard/asgard.yaml",
+                                             "path": "/packages/storefront-display/payements/asgard/asgard.yaml",
                                              "children": [],
                                              "type": "file"
                                         },
                                         {
                                              "IsDir": true,
                                              "name": "version",
-                                             "path": "/public/storefront-display/payements/asgard/version",
+                                             "path": "/packages/storefront-display/payements/asgard/version",
                                              "children": [],
                                              "type": "folder"
                                         }
@@ -45,19 +45,19 @@
                               {
                                    "IsDir": true,
                                    "name": "pps",
-                                   "path": "/public/storefront-display/payements/pps",
+                                   "path": "/packages/storefront-display/payements/pps",
                                    "children": [
                                         {
                                              "IsDir": true,
                                              "name": "archive",
-                                             "path": "/public/storefront-display/payements/pps/archive",
+                                             "path": "/packages/storefront-display/payements/pps/archive",
                                              "children": [],
                                              "type": "folder"
                                         },
                                         {
                                              "IsDir": false,
                                              "name": "pps.yaml",
-                                             "path": "/public/storefront-display/payements/pps/pps.yaml",
+                                             "path": "/packages/storefront-display/payements/pps/pps.yaml",
                                              "children": [],
                                              "type": "file"
                                         }
@@ -65,24 +65,31 @@
                                    "type": "folder"
                               },
                               {
+                                   "IsDir": false,
+                                   "name": "tushar.yaml",
+                                   "path": "/packages/storefront-display/payements/tushar.yaml",
+                                   "children": [],
+                                   "type": "file"
+                              },
+                              {
                                    "IsDir": true,
                                    "name": "wallet",
-                                   "path": "/public/storefront-display/payements/wallet",
+                                   "path": "/packages/storefront-display/payements/wallet",
                                    "children": [
                                         {
                                              "IsDir": true,
                                              "name": "archive",
-                                             "path": "/public/storefront-display/payements/wallet/archive",
+                                             "path": "/packages/storefront-display/payements/wallet/archive",
                                              "children": [
                                                   {
                                                        "IsDir": true,
                                                        "name": "1.1.0",
-                                                       "path": "/public/storefront-display/payements/wallet/archive/1.1.0",
+                                                       "path": "/packages/storefront-display/payements/wallet/archive/1.1.0",
                                                        "children": [
                                                             {
                                                                  "IsDir": false,
                                                                  "name": "2.1.0.yaml",
-                                                                 "path": "/public/storefront-display/payements/wallet/archive/1.1.0/2.1.0.yaml",
+                                                                 "path": "/packages/storefront-display/payements/wallet/archive/1.1.0/2.1.0.yaml",
                                                                  "children": [],
                                                                  "type": "file"
                                                             }
@@ -92,12 +99,12 @@
                                                   {
                                                        "IsDir": true,
                                                        "name": "2.0.2",
-                                                       "path": "/public/storefront-display/payements/wallet/archive/2.0.2",
+                                                       "path": "/packages/storefront-display/payements/wallet/archive/2.0.2",
                                                        "children": [
                                                             {
                                                                  "IsDir": false,
                                                                  "name": "2.0.2.yaml",
-                                                                 "path": "/public/storefront-display/payements/wallet/archive/2.0.2/2.0.2.yaml",
+                                                                 "path": "/packages/storefront-display/payements/wallet/archive/2.0.2/2.0.2.yaml",
                                                                  "children": [],
                                                                  "type": "file"
                                                             }
@@ -110,7 +117,7 @@
                                         {
                                              "IsDir": false,
                                              "name": "wallet.yaml",
-                                             "path": "/public/storefront-display/payements/wallet/wallet.yaml",
+                                             "path": "/packages/storefront-display/payements/wallet/wallet.yaml",
                                              "children": [],
                                              "type": "file"
                                         }
@@ -119,13 +126,6 @@
                               }
                          ],
                          "type": "folder"
-                    },
-                    {
-                         "IsDir": false,
-                         "name": "try.yups",
-                         "path": "/public/storefront-display/try.yups",
-                         "children": [],
-                         "type": "file"
                     }
                ],
                "type": "folder"
