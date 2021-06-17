@@ -12,7 +12,15 @@
                          "IsDir": true,
                          "name": "cart",
                          "path": "/packages/storefront-display/cart",
-                         "children": [],
+                         "children": [
+                              {
+                                   "IsDir": true,
+                                   "name": "checkout_service",
+                                   "path": "/packages/storefront-display/cart/checkout_service",
+                                   "children": [],
+                                   "type": "folder"
+                              }
+                         ],
                          "type": "folder"
                     },
                     {
@@ -25,6 +33,13 @@
                                    "name": "asgard",
                                    "path": "/packages/storefront-display/payements/asgard",
                                    "children": [
+                                        {
+                                             "IsDir": true,
+                                             "name": "archive",
+                                             "path": "/packages/storefront-display/payements/asgard/archive",
+                                             "children": [],
+                                             "type": "folder"
+                                        },
                                         {
                                              "IsDir": false,
                                              "name": "asgard.yaml",
@@ -126,6 +141,13 @@
                               }
                          ],
                          "type": "folder"
+                    },
+                    {
+                         "IsDir": false,
+                         "name": "tushar1.yaml",
+                         "path": "/packages/storefront-display/tushar1.yaml",
+                         "children": [],
+                         "type": "file"
                     }
                ],
                "type": "folder"
