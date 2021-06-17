@@ -12,7 +12,15 @@
                          "IsDir": true,
                          "name": "cart",
                          "path": "/packages/storefront-display/cart",
-                         "children": [],
+                         "children": [
+                              {
+                                   "IsDir": true,
+                                   "name": "checkout_service",
+                                   "path": "/packages/storefront-display/cart/checkout_service",
+                                   "children": [],
+                                   "type": "folder"
+                              }
+                         ],
                          "type": "folder"
                     },
                     {
