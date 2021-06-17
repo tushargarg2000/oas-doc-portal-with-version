@@ -1,58 +1,36 @@
 {
      "IsDir": true,
-     "name": "packages",
-     "path": "/packages",
+     "name": "Myntra",
+     "path": "/Myntra",
      "children": [
           {
                "IsDir": true,
+               "name": "SCM",
+               "path": "/Myntra/SCM",
+               "children": [],
+               "type": "folder"
+          },
+          {
+               "IsDir": true,
                "name": "storefront-display",
-               "path": "/packages/storefront-display",
+               "path": "/Myntra/storefront-display",
                "children": [
                     {
                          "IsDir": true,
-                         "name": "cart",
-                         "path": "/packages/storefront-display/cart",
-                         "children": [
-                              {
-                                   "IsDir": true,
-                                   "name": "checkout_service",
-                                   "path": "/packages/storefront-display/cart/checkout_service",
-                                   "children": [],
-                                   "type": "folder"
-                              }
-                         ],
-                         "type": "folder"
-                    },
-                    {
-                         "IsDir": true,
                          "name": "payements",
-                         "path": "/packages/storefront-display/payements",
+                         "path": "/Myntra/storefront-display/payements",
                          "children": [
                               {
                                    "IsDir": true,
                                    "name": "asgard",
-                                   "path": "/packages/storefront-display/payements/asgard",
+                                   "path": "/Myntra/storefront-display/payements/asgard",
                                    "children": [
-                                        {
-                                             "IsDir": true,
-                                             "name": "archive",
-                                             "path": "/packages/storefront-display/payements/asgard/archive",
-                                             "children": [],
-                                             "type": "folder"
-                                        },
                                         {
                                              "IsDir": false,
                                              "name": "asgard.yaml",
-                                             "path": "/packages/storefront-display/payements/asgard/asgard.yaml",
+                                             "path": "/Myntra/storefront-display/payements/asgard/asgard.yaml",
                                              "children": [],
                                              "type": "file"
-                                        },
-                                        {
-                                             "IsDir": true,
-                                             "name": "version",
-                                             "path": "/packages/storefront-display/payements/asgard/version",
-                                             "children": [],
-                                             "type": "folder"
                                         }
                                    ],
                                    "type": "folder"
@@ -60,19 +38,12 @@
                               {
                                    "IsDir": true,
                                    "name": "pps",
-                                   "path": "/packages/storefront-display/payements/pps",
+                                   "path": "/Myntra/storefront-display/payements/pps",
                                    "children": [
-                                        {
-                                             "IsDir": true,
-                                             "name": "archive",
-                                             "path": "/packages/storefront-display/payements/pps/archive",
-                                             "children": [],
-                                             "type": "folder"
-                                        },
                                         {
                                              "IsDir": false,
                                              "name": "pps.yaml",
-                                             "path": "/packages/storefront-display/payements/pps/pps.yaml",
+                                             "path": "/Myntra/storefront-display/payements/pps/pps.yaml",
                                              "children": [],
                                              "type": "file"
                                         }
@@ -80,31 +51,24 @@
                                    "type": "folder"
                               },
                               {
-                                   "IsDir": false,
-                                   "name": "tushar.yaml",
-                                   "path": "/packages/storefront-display/payements/tushar.yaml",
-                                   "children": [],
-                                   "type": "file"
-                              },
-                              {
                                    "IsDir": true,
                                    "name": "wallet",
-                                   "path": "/packages/storefront-display/payements/wallet",
+                                   "path": "/Myntra/storefront-display/payements/wallet",
                                    "children": [
                                         {
                                              "IsDir": true,
                                              "name": "archive",
-                                             "path": "/packages/storefront-display/payements/wallet/archive",
+                                             "path": "/Myntra/storefront-display/payements/wallet/archive",
                                              "children": [
                                                   {
                                                        "IsDir": true,
                                                        "name": "1.1.0",
-                                                       "path": "/packages/storefront-display/payements/wallet/archive/1.1.0",
+                                                       "path": "/Myntra/storefront-display/payements/wallet/archive/1.1.0",
                                                        "children": [
                                                             {
                                                                  "IsDir": false,
                                                                  "name": "2.1.0.yaml",
-                                                                 "path": "/packages/storefront-display/payements/wallet/archive/1.1.0/2.1.0.yaml",
+                                                                 "path": "/Myntra/storefront-display/payements/wallet/archive/1.1.0/2.1.0.yaml",
                                                                  "children": [],
                                                                  "type": "file"
                                                             }
@@ -114,12 +78,12 @@
                                                   {
                                                        "IsDir": true,
                                                        "name": "2.0.2",
-                                                       "path": "/packages/storefront-display/payements/wallet/archive/2.0.2",
+                                                       "path": "/Myntra/storefront-display/payements/wallet/archive/2.0.2",
                                                        "children": [
                                                             {
                                                                  "IsDir": false,
                                                                  "name": "2.0.2.yaml",
-                                                                 "path": "/packages/storefront-display/payements/wallet/archive/2.0.2/2.0.2.yaml",
+                                                                 "path": "/Myntra/storefront-display/payements/wallet/archive/2.0.2/2.0.2.yaml",
                                                                  "children": [],
                                                                  "type": "file"
                                                             }
@@ -132,7 +96,7 @@
                                         {
                                              "IsDir": false,
                                              "name": "wallet.yaml",
-                                             "path": "/packages/storefront-display/payements/wallet/wallet.yaml",
+                                             "path": "/Myntra/storefront-display/payements/wallet/wallet.yaml",
                                              "children": [],
                                              "type": "file"
                                         }
@@ -141,13 +105,6 @@
                               }
                          ],
                          "type": "folder"
-                    },
-                    {
-                         "IsDir": false,
-                         "name": "tushar1.yaml",
-                         "path": "/packages/storefront-display/tushar1.yaml",
-                         "children": [],
-                         "type": "file"
                     }
                ],
                "type": "folder"

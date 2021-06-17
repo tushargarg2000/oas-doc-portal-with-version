@@ -1,6 +1,6 @@
 openapi: 3.0.0
 servers:
-  - description: SwaggerHub API Auto Mocking
+  - description: SwaggerHub API Auto Mocking with version
     url: 'https://virtserver.swaggerhub.com/myntra179/FirstApi/1.0.0'
 info:
   description: This is a simple API
