@@ -8,11 +8,6 @@ import "swagger-ui-react/swagger-ui.css"
 function Type(props) {
 
   var copyPath =  props.path;
-  copyPath = copyPath;
-
-  console.log("new updated path is ",props.path);
-
-  console.log("path that is rendered is ",copyPath);
 
   const extension = copyPath.split(".").pop(); //checking if extension is valid with this or not
   //console.log("extension is ",extension);
@@ -64,7 +59,7 @@ class Navbar extends Component {
   }
 
   render() {
-    console.log(";;;", this.props)
+    //console.log(";;;", this.props)
     return (
       <div>
         <div className="big-div">

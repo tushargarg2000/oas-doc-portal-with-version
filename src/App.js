@@ -24,8 +24,8 @@ class App extends Component {
     this.state = {
       //checked: false,
       // definitionLink: "https://petstore3.swagger.io/api/v3/openapi.json"
-      // definitionLink: window.location.pathname.replace("/packages", "http://localhost:3000/")
-      definitionLink : window.location.pathname
+       //definitionLink: window.location.pathname.replace("/packages", "http://localhost:3000/")
+       definitionLink : window.location.pathname
     }
     //this.handleChange = this.handleChange.bind(this);
     this.updateDefinitionLink = this.updateDefinitionLink.bind(this)
@@ -33,8 +33,8 @@ class App extends Component {
 
   updateDefinitionLink(newLink) {
     this.setState({
-      definitionLink : newLink
-      //definitionLink: newLink.replace("/packages", "http://localhost:3000/")
+      //definitionLink : newLink
+      definitionLink: newLink
       //definitionLink: newLink.replace (/^/,"http://localhost:3000")
     })
   }
@@ -47,7 +47,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <GlobalStyles/> */}
 
         <StyledTree>
 				<div className="side-bar" >
@@ -69,6 +68,7 @@ class App extends Component {
         </Router>
         </div>
         </StyledTree>
+
         <div className = "menu" >
           <div className = "heading">
             <Navbar path = {this.state.definitionLink} />
