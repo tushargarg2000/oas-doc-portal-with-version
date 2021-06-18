@@ -7,11 +7,11 @@ import "swagger-ui-react/swagger-ui.css"
 
 function Type(props) {
 
-  var copyPath =  props.path;
-
+  const copyPath =  props.path;
+  
   const extension = copyPath.split(".").pop(); //checking if extension is valid with this or not
-  //console.log("extension is ",extension);
-  if(extension!=="yaml"){
+  console.log("extension is ",extension);
+  if(extension!="yaml"){
   return (
     <div className = "extension">
       Welcome to API docs definition 
@@ -22,17 +22,20 @@ function Type(props) {
   );
   }
   else if (props.value) {
+
     return (
       <div id="api-data-swagger">
-        <SwaggerUI url={copyPath}/>
+        <SwaggerUI url= {props.path} />
         {/*<SwaggerUI url="./storefront-display/payements/asgard/asgard.yaml"/>*/}
        {/*<SwaggerUI url="http://localhost:3000/storefront-display/payements/pps/pps.yaml"/>*/}
       </div>
     );
-  } else {
+
+  } 
+  else {
     return (
       <div id="api-data-redoc">
-        <RedocStandalone specUrl={copyPath}
+        <RedocStandalone specUrl={props.path}
                          options={{
                            nativeScrollbars: false,
                            theme: {colors: {primary: {main: '#dd5522'}}},
@@ -59,7 +62,7 @@ class Navbar extends Component {
   }
 
   render() {
-    //console.log(";;;", this.props)
+    console.log(";;;", this.props)
     return (
       <div>
         <div className="big-div">
