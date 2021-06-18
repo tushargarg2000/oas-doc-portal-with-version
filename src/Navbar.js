@@ -116,39 +116,4 @@ class Navbar extends Component {
   }
 }
 
-
-// function Navbar() {
-
-//   // const [state, setState] = React.useState({
-//   //   checkedA: true,
-//   //   checkedB: true,
-//   // });
-
-//   // const handleChange = (event) => {
-//   //   setState({ ...state, [event.target.name]: event.target.checked });
-//   // };
-
-//   return (
-//     <div>
-
-//       <Link to="/">Get the Redoc version here </Link>
-//       <br />
-//       <Link to="/Swagger"> Get the Swagger version Here </Link>
-
-//       {/* <Switch
-//         defaultChecked
-//         color="default"
-//         inputProps={{ 'aria-label': 'checkbox with default color' }}
-//       /> */}
-
-//       <Switch checkedChildren= "Read Docs" unCheckedChildren= "Try-It-Out" defaultChecked size = "large" />
-
-//       <Switch />
-//       re
-
-//     </div>
-
-//   );
-// };
-
 export default Navbar;
