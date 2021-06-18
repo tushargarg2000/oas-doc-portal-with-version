@@ -1,26 +1,10 @@
 import React, {Component} from "react";
-
 import styled from "styled-components";
-import {AiOutlineFile, AiOutlineFolder} from "react-icons/ai";
-import {DiJavascript1, DiCss3Full, DiHtml5, DiReact} from "react-icons/di";
 
-import {getClassWithColor} from "file-icons-js";
 
-import FolderContent from "./FolderContent";
 import PropTypes from "prop-types";
-import {BrowserRouter as Router, Route} from "react-router-dom";
+import {FcRight} from "react-icons/fc"
 
-import {StyledButton} from "./styles/GlobalStyles";
-
-import {getFolderContent} from "./utils";
-import {update} from "lodash";
-
-const FILE_ICONS = {
-  js: <DiJavascript1/>,
-  css: <DiCss3Full/>,
-  html: <DiHtml5/>,
-  jsx: <DiReact/>
-};
 
 const StyledFile = styled.div`
     padding-left: 20px;
@@ -63,11 +47,11 @@ class File extends Component {
 
   render() {
     const {name, depth} = this.props;
-    const iconClass = getClassWithColor(name);
-    // const iconClass = getClassWithColor(name);
+    
+    
     return (
       <StyledFile depth={depth} onClick={this.onFileClick}>
-        <i className={iconClass}/><span>{name}</span>
+        <FcRight/><span>{name}</span>
       </StyledFile>
     );
   }

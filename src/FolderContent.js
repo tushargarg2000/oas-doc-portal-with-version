@@ -94,7 +94,7 @@ class FolderContent extends React.Component {
         //console.log(temp);
         const extension = temp.split(".").pop(); //checking if extension is valid with this or not
         //console.log("extension is ",extension);
-        if(extension=="yaml"){
+        if(extension==="yaml"){
           return (
           <div key={foldOrFile.name}>
           <File

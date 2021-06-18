@@ -11,7 +11,7 @@ function Type(props) {
 
   const extension = copyPath.split(".").pop(); //checking if extension is valid with this or not
   //console.log("extension is ",extension);
-  if(extension!="yaml"){
+  if(extension!=="yaml"){
   return (
     <div className = "extension">
       Welcome to API docs definition 

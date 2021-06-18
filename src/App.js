@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 import './App.css'
-// import Switch from "react-switch";
+
 import '../node_modules/swagger-ui/dist/swagger-ui.css'
-// import Navbar from './Navbar.js'
+
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import styled from "styled-components";
-// import Sidebar from './Sidebar.js';
+
 
 import Folder from './Folder.js';
-import GlobalStyles from './styles/GlobalStyles';
+
 import Navbar from "./Navbar";
 
 const StyledTree = styled.div`
