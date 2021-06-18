@@ -1,7 +1,7 @@
 {
   "packages": [
     
-    "packages/*"
+    "pubic/Myntra/storefront-display/*"
     
   ],
   "version": "independent"
